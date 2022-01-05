@@ -43,23 +43,23 @@
                 <div class="absolute left-0 z-20 hidden w-full px-5 py-3 duration-300 bg-white shadow lg:w-auto collapse navbar-collapse lg:block top-full mt-full lg:static lg:bg-transparent lg:shadow-none" id="navbarOne">
                   <ul id="nav" class="items-center content-start mr-auto lg:justify-end navbar-nav lg:flex">
                     <li class="nav-item ml-5 lg:ml-11">
-                      <a class="page-scroll active" href="#home">Home</a>
+                      <a  href="/">Home</a>
                     </li>
                      <li class="nav-item ml-5 lg:ml-11">
-                      <a class="page-scroll" href="#features">Profil</a>
+                      <a  href="profil">Profil</a>
                     </li>
                     <li class="nav-item ml-5 lg:ml-11">
-                      <a class="page-scroll" href="#about">Portofolio</a>
+                      <a href="/portofolio">Portofolio</a>
                     </li>
 
                     <li class="nav-item ml-5 lg:ml-11">
-                      <a class="page-scroll" href="#why">Blog</a>
+                      <a  href="/blog">Blog</a>
                     </li>
                     <li class="nav-item ml-5 lg:ml-11">
-                      <a class="page-scroll" href="#pricing">Gallery</a>
+                      <a  href="/kontak">kontak</a>
                     </li>
                     <li class="nav-item ml-5 lg:ml-11">
-                      <a class="page-scroll" href="#testimonials">Kontak</a>
+                      <a  href="/galery">Gallery</a>
                     </li>
                   </ul>
                 </div>
@@ -77,14 +77,15 @@
     <!-- ========================= header end ========================= -->
 
     <!-- ========================= hero-section start ========================= -->
-    <section id="home" class="hero-section relative bg-no-repeat bg-top z-10 pt-200 pb-13 lg:pb-200 2xl:pb-120" style="background-image: url('img/hero/hero-bg.svg')">
+	@foreach ($home as $home)
+    <section  class="hero-section relative bg-no-repeat bg-top z-10 pt-200 pb-13 lg:pb-200 2xl:pb-120" style="background-image: url('img/hero/hero-bg.svg')">
       <div class="container">
         <div class="row flex items-center relative">
           <div class="w-full lg:w-1/2">
             <div class="hero-content mb-0 lg:mb-6">
-              <h1 class="text-white mb-9 text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-5xl 2xl:text-6xl">Launch Your SaaS Website in Minutes!</h1>
+              <h1 class="text-white mb-9 text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-5xl 2xl:text-6xl">{{ $home->title }}</h1>
               <p class="text-white text-lg mb-10 xl:pr-18 2xl:pr-120">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+				{{ $home->text }}
               </p>
 							<a href="javascript:void(0)" class="main-btn border-btn btn-hover mb-2">Get Started</a>
 							<a href="#features" class="scroll-bottom"> <i class="lni lni-arrow-down"></i></a>
@@ -92,23 +93,66 @@
 					</div>
 					<div class="w-full lg:w-1/2">
 						<div class="hero-img pt-8 lg:pt-0">
-							<img src="img/hero/hero-img.png" alt="" class="w-full lg:w-auto">
+							<img src="{{ $home->image }}" alt="" class="w-full lg:w-auto">
 						</div>
 					</div>
         </div>
 			</div>
     </section>
+	@endforeach
 		<!-- ========================= hero-section end ========================= -->
 
 		<!-- ========================= feature-section start ========================= -->
+	
+			
 		<section id="features" class="feature-section pt-120">
+			<div class="section-title text-center">
+				<h1 class="mb-8">What our customers says</h1>
+			</div>
+			<div class="testimonial-active-wrapper relative">
+
+				<div class="shapes">
+					<img src="img/testimonial/testimonial-shape.svg" alt="" class="shape shape-1 hidden lg:block -left-25 top-1/2 transform -translate-y-1/2">
+					</div>
+
+				<div class="testimonial-active">
+
+				
+					<div class="single-testimonial">
+						<div class="row flex">
+							<div class="w-full lg:w-5/12">
+								<div class="testimonial-img inline-block lg:block text-left lg:text-right relative mb-8 lg:mb-0">
+									<img src="img/testimonial/testimonial-1.png" alt="" class="lg:ml-auto">
+									<div class="quote">
+										<i class="lni lni-quotation"></i>
+									</div>
+								</div>
+							</div>
+							<div class="w-0 lg:w-1/12"></div>
+							<div class="lg:w-6/12">
+								<div class="content-wrapper">
+									<div class="content">
+										<p class="text-lg leading-7 mb-8">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem.</p>
+									</div>
+									<div class="info">
+										<h4 class="mb-3">Jonathon Smith</h4>
+										<p>Developer and Youtuber</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					
+
+				</div>
+			</div>
+		</div>
 			<div class="container">
 				<div class="row flex justify-center">
 					<div class="w-full md:w-8/12 lg:w-4/12">
 						<div class="text-center px-3 2xl:px-10 py-8">
-							<div class="feature-icon">
-								<i class="lni lni-bootstrap"></i>
-							</div>
+							
 							<div class="content">
 								<h3 class="mb-5">Bootstrap 5</h3>
 								<p class="text-lg">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>
@@ -117,26 +161,14 @@
 					</div>
 					<div class="w-full md:w-8/12 lg:w-4/12">
 						<div class="text-center px-3 2xl:px-10 py-8">
-							<div class="feature-icon">
-								<i class="lni lni-layout"></i>
-							</div>
+							
 							<div class="content">
 								<h3 class="mb-5">Clean Design</h3>
 								<p class="text-lg">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>
 							</div>
 						</div>
 					</div>
-					<div class="w-full md:w-8/12 lg:w-4/12">
-						<div class="text-center px-3 2xl:px-10 py-8">
-							<div class="feature-icon">
-								<i class="lni lni-coffee-cup"></i>
-							</div>
-							<div class="content">
-								<h3 class="mb-5">Easy to Use</h3>
-								<p class="text-lg">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</section>
@@ -283,237 +315,6 @@
 			</div>
 		</section>
 		<!-- ========================= feature-section end ========================= -->
-
-		<!-- ========================= pricing-section end ========================= -->
-		<section id="pricing" class="pricing-section relative z-10 pt-120 pb-120">
-			<div class="container">
-				<div class="row flex justify-center">
-					<div class="w-full md:w-9/12 lg:w-8/12 xl:w-6/12">
-						<div class="section-title text-center mb-9">
-							<h1 class="mb-6 ">Choose a Plan</h1>
-							<p class="">Lorem ipsum dolor sit amet consetetur sadipscing elitr sswed diam nonumy eirmod tempor nvidunt.</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="pricing-nav-wrapper mb-15">
-					<ul class="pricing-nav nav nav-pills flex justify-center">
-						<li class="nav-item">
-								<button class="active" data-tab-target="#monthlyPlan">Monthly</button>
-						</li>
-						<li class="nav-item">
-								<button data-tab-target="#yearlyPlan">Yearly</button>
-						</li>
-					</ul>
-				</div>
-
-				<div class="tab-content pricing_content">
-					<div class="tab-pane active" id="monthlyPlan" data-tab-content>
-						<div class="row flex flex-wrap justify-center">
-							<div class="w-full sm:w-10/12 md:w-8/12 lg:w-4/12">
-								<div class="single-pricing mx-4">
-									<div class="pricing-header">
-										<h1 class="mb-8 text-theme-color">$36</h1>
-										<h3 class="package-name">Basic Account</h3>
-									</div>
-									<div class="content mb-8 2xl:pl-13">
-										<ul class="pricing-feature">
-											<li> <i class="lni lni-checkmark active"></i> Unlimited Acces</li>
-											<li> <i class="lni lni-checkmark active"></i> Single User </li>
-											<li> <i class="lni lni-checkmark active"></i> Unlimited Storage</li>
-											<li> <i class="lni lni-close"></i> 24/7 Support </li>
-											<li> <i class="lni lni-close"></i> Free Future Updates</li>
-										</ul>
-									</div>
-									<div class="pricing-btn">
-										<a href="javascript:void(0)" class="main-btn btn-hover border-btn">Get Start</a>
-									</div>
-								</div>
-							</div>
-							<div class="w-full sm:w-10/12 md:w-8/12 lg:w-4/12">
-								<div class="single-pricing mx-4">
-									<div class="pricing-header">
-										<h1 class="mb-8 text-theme-color">$56</h1>
-										<h3 class="package-name">Standard Account</h3>
-									</div>
-									<div class="content mb-8 2xl:pl-13">
-										<ul class="pricing-feature">
-											<li> <i class="lni lni-checkmark active"></i> Unlimited Acces</li>
-											<li> <i class="lni lni-checkmark active"></i> 20+ Users </li>
-											<li> <i class="lni lni-checkmark active"></i> Unlimited Storage</li>
-											<li> <i class="lni lni-checkmark active"></i> 24/7 Support </li>
-											<li> <i class="lni lni-checkmark active"></i> Free Future Updates</li>
-										</ul>
-									</div>
-									<div class="pricing-btn">
-										<a href="javascript:void(0)" class="main-btn btn-hover">Get Start</a>
-									</div>
-								</div>
-							</div>
-							<div class="w-full sm:w-10/12 md:w-8/12 lg:w-4/12">
-								<div class="single-pricing mx-4">
-									<div class="pricing-header">
-										<h1 class="mb-8 text-theme-color">$89</h1>
-										<h3 class="package-name">Premium Account</h3>
-									</div>
-									<div class="content mb-8 2xl:pl-13">
-										<ul class="pricing-feature">
-											<li> <i class="lni lni-checkmark active"></i> Unlimited Acces</li>
-											<li> <i class="lni lni-checkmark active"></i> Unlimited Users </li>
-											<li> <i class="lni lni-checkmark active"></i> Unlimited Storage</li>
-											<li> <i class="lni lni-checkmark active"></i> 24/7 Support </li>
-											<li> <i class="lni lni-checkmark active"></i> Free Future Updates</li>
-										</ul>
-									</div>
-									<div class="pricing-btn">
-										<a href="javascript:void(0)" class="main-btn btn-hover border-btn">Get Start</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="tab-pane" id="yearlyPlan" data-tab-content>
-						<div class="row flex flex-wrap justify-center">
-							<div class="w-full sm:w-10/12 md:w-8/12 lg:w-4/12">
-								<div class="single-pricing mx-4">
-									<div class="pricing-header">
-										<h1 class="mb-8 text-theme-color">$136</h1>
-										<h3 class="package-name">Basic Account</h3>
-									</div>
-									<div class="content mb-8 2xl:pl-13">
-										<ul class="pricing-feature">
-											<li> <i class="lni lni-checkmark active"></i> Unlimited Acces</li>
-											<li> <i class="lni lni-checkmark active"></i> Single User </li>
-											<li> <i class="lni lni-checkmark active"></i> Unlimited Storage</li>
-											<li> <i class="lni lni-close"></i> 24/7 Support </li>
-											<li> <i class="lni lni-close"></i> Free Future Updates</li>
-										</ul>
-									</div>
-									<div class="pricing-btn">
-										<a href="javascript:void(0)" class="main-btn btn-hover border-btn">Get Start</a>
-									</div>
-								</div>
-							</div>
-							<div class="w-full sm:w-10/12 md:w-8/12 lg:w-4/12">
-								<div class="single-pricing mx-4">
-									<div class="pricing-header">
-										<h1 class="mb-8 text-theme-color">$156</h1>
-										<h3 class="package-name">Standard Account</h3>
-									</div>
-									<div class="content mb-8 2xl:pl-13">
-										<ul class="pricing-feature">
-											<li> <i class="lni lni-checkmark active"></i> Unlimited Acces</li>
-											<li> <i class="lni lni-checkmark active"></i> 20+ Users </li>
-											<li> <i class="lni lni-checkmark active"></i> Unlimited Storage</li>
-											<li> <i class="lni lni-checkmark active"></i> 24/7 Support </li>
-											<li> <i class="lni lni-close"></i> Free Future Updates</li>
-										</ul>
-									</div>
-									<div class="pricing-btn">
-										<a href="javascript:void(0)" class="main-btn btn-hover">Get Start</a>
-									</div>
-								</div>
-							</div>
-							<div class="w-full sm:w-10/12 md:w-8/12 lg:w-4/12">
-								<div class="single-pricing mx-4">
-									<div class="pricing-header">
-										<h1 class="mb-8 text-theme-color">$189</h1>
-										<h3 class="package-name">Premium Account</h3>
-									</div>
-									<div class="mb-8 2xl:pl-13">
-										<ul class="pricing-feature">
-											<li> <i class="lni lni-checkmark active"></i> Unlimited Acces</li>
-											<li> <i class="lni lni-checkmark active"></i> Unlimited Users </li>
-											<li> <i class="lni lni-checkmark active"></i> Unlimited Storage</li>
-											<li> <i class="lni lni-checkmark active"></i> 24/7 Support </li>
-											<li> <i class="lni lni-checkmark active"></i> Free Future Updates</li>
-										</ul>
-									</div>
-									<div class="pricing-btn">
-										<a href="javascript:void(0)" class="main-btn btn-hover border-btn">Get Start</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- ========================= pricing-section end ========================= -->
-
-		<!-- ========================= testimonial-section start ========================= -->
-		<section id="testimonials" class="testimonial-section pt-8 pb-25 sm:p-0 lg:py-170">
-			<div class="container">
-				<div class="section-title text-center">
-					<h1 class="mb-8">What our customers says</h1>
-				</div>
-				<div class="testimonial-active-wrapper relative">
-
-					<div class="shapes">
-						<img src="img/testimonial/testimonial-shape.svg" alt="" class="shape shape-1 hidden lg:block -left-25 top-1/2 transform -translate-y-1/2">
-						<img src="img/testimonial/testimonial-dots.svg" alt="" class="shape shape-2 hidden lg:block left-150 -bottom-110 lg:-bottom-13 lg:w-1/4 xl:w-max">
-					</div>
-
-					<div class="testimonial-active">
-
-						<!-- single testimonial -->
-						<div class="single-testimonial">
-							<div class="row flex">
-								<div class="w-full lg:w-5/12">
-									<div class="testimonial-img inline-block lg:block text-left lg:text-right relative mb-8 lg:mb-0">
-										<img src="img/testimonial/testimonial-1.png" alt="" class="lg:ml-auto">
-										<div class="quote">
-											<i class="lni lni-quotation"></i>
-										</div>
-									</div>
-								</div>
-								<div class="w-0 lg:w-1/12"></div>
-								<div class="lg:w-6/12">
-									<div class="content-wrapper">
-										<div class="content">
-											<p class="text-lg leading-7 mb-8">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem.</p>
-										</div>
-										<div class="info">
-											<h4 class="mb-3">Jonathon Smith</h4>
-											<p>Developer and Youtuber</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- single testimonial -->
-						<div class="single-testimonial">
-							<div class="row flex">
-								<div class="w-full lg:w-5/12">
-									<div class="testimonial-img inline-block lg:block text-left lg:text-right relative mb-8 lg:mb-0">
-										<img src="img/testimonial/testimonial-2.png" alt="" class="lg:ml-auto">
-										<div class="quote">
-											<i class="lni lni-quotation"></i>
-										</div>
-									</div>
-								</div>
-								
-								<div class="w-0 lg:w-1/12"></div>
-								<div class="lg:w-6/12">
-									<div class="content-wrapper">
-										<div class="content">
-											<p class="text-lg leading-7 mb-8">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem.</p>
-										</div>
-										<div class="info">
-											<h4 class="mb-3">Gray Simon</h4>
-											<p>UIX Designer and Developer</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- ========================= testimonial-section end ========================= -->
 		
 		<!-- ========================= subscribe-section start ========================= -->
 		<section id="contact" class="subscribe-section pt-120">
@@ -567,26 +368,15 @@
 							<div class="footer-widget mb-10 mx-3">
 								<h3 class="mb-6 text-white">About Us</h3>
 								<ul class="links">
-									<li> <a href="javascript:void(0)">Home</a> </li>
-									<li> <a href="javascript:void(0)">Feature</a> </li>
-									<li> <a href="javascript:void(0)">About</a> </li>
-									<li> <a href="javascript:void(0)">Testimonials</a> </li>
+									<li> <a href="/">Home</a> </li>
+									<li> <a href="/profil">Profil</a> </li>
+									<li> <a href="/portofolio">Portofolio</a> </li>
+									<li> <a href="/blog">Blog</a> </li>
+									<li> <a href="/kontak">Kontak</a> </li>
+									<li> <a href="/galery">Gallery</a> </li>
 								</ul>
 							</div>
 						</div>
-
-						<div class="w-full md:w-6/12 lg:w-3/12">
-							<div class="footer-widget mb-10 mx-3">
-								<h3 class="mb-6 text-white">Features</h3>
-								<ul class="links">
-									<li> <a href="javascript:void(0)">How it works</a> </li>
-									<li> <a href="javascript:void(0)">Privacy policy</a> </li>
-									<li> <a href="javascript:void(0)">Terms of service</a> </li>
-									<li> <a href="javascript:void(0)">Refund policy</a></li>
-								</ul>
-							</div>
-						</div>
-
 						<div class="w-full md:w-6/12 lg:w-3/12">
 							<div class="footer-widget mb-10 mx-3">
 								<h3 class="mb-6 text-white">Other Products</h3>

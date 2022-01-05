@@ -46,7 +46,7 @@
                       <a  href="/">Home</a>
                     </li>
                      <li class="nav-item ml-5 lg:ml-11">
-                      <a  href="profil">Profil</a>
+                      <a  href="/profil">Profil</a>
                     </li>
                     <li class="nav-item ml-5 lg:ml-11">
                       <a href="/portofolio">Portofolio</a>
@@ -74,10 +74,68 @@
       </div>
       <!-- navbar area -->
     </header>
+<section id="features" class="feature-section pt-120" style="background-image: url('img/hero/hero-bg.svg')">>
+			<div class="section-title text-center">
+				<h1 class="mb-8">What our customers says</h1>
+			</div>
+			<div class="testimonial-active-wrapper relative">
 
+				<div class="testimonial-active">
 
-        <!-- ========================= footer start ========================= -->
-		<footer class="footer bg-cover bg-no-repeat bg-right-top pt-120 mt-25 bg-theme-color md:bg-transparent md:pt-260 lg:pt-260" style="background-image: url('img/footer/footer-bg.svg');">
+				
+					<div class=>
+						<div class="row flex">
+							<div class="w-full lg:w-5/12">
+								<div class="testimonial-img inline-block lg:block text-left lg:text-right relative mb-8 lg:mb-0">
+									<img src="img/testimonial/testimonial-1.png" alt="" class="lg:ml-auto">
+									<div class="quote">
+										<i class="lni lni-quotation"></i>
+									</div>
+								</div>
+							</div>
+							<div class="w-0 lg:w-1/12"></div>
+							<div class="lg:w-6/12">
+								<div class="content-wrapper">
+									<div class="content">
+										<p class="text-lg leading-7 mb-8">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem.</p>
+									</div>
+									<div class="info">
+										<h4 class="mb-3">Jonathon Smith</h4>
+										<p>Developer and Youtuber</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+          
+				</div>
+			</div>
+		</div>
+			<div class="container">
+				<div class="row flex justify-center">
+					<div class="w-full md:w-8/12 lg:w-4/12">
+						<div class="text-center px-3 2xl:px-10 py-8">
+							
+							<div class="content">
+								<h3 class="mb-5">Bootstrap 5</h3>
+								<p class="text-lg">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>
+							</div>
+						</div>
+					</div>
+					<div class="w-full md:w-8/12 lg:w-4/12">
+						<div class="text-center px-3 2xl:px-10 py-8">
+							
+							<div class="content">
+								<h3 class="mb-5">Clean Design</h3>
+								<p class="text-lg">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+    <footer class="footer bg-cover bg-no-repeat bg-right-top pt-120 mt-25 bg-theme-color md:bg-transparent md:pt-260 lg:pt-260" style="background-image: url('img/footer/footer-bg.svg');">
 			<div class="container">
 				<div class="widget-wrapper">
 					<div class="row">
@@ -131,16 +189,5 @@
 
 			</div>
 		</footer>
-    <!-- ========================= footer end ========================= -->
-
-    <!-- ========================= scroll-top ========================= -->
-    <a href="#" class="scroll-top btn-hover">
-      <i class="lni lni-chevron-up"></i>
-    </a>
-
-    <!-- ========================= JS here ========================= -->
-    <script src="js/tiny-slider.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/main.js"></script>
   </body>
 </html>

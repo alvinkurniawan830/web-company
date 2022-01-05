@@ -13,9 +13,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\FrontendController@index'
-);
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('/galery', function() {
+    return view('frontend.galery');
+});
+Route::get('/portofolio', function() {
+    return view('frontend.portofolio');
+});
+Route::get('/profil', function() {
+    return view('frontend.profile');
+});
+Route::get('/blog', function() {
+    return view('frontend.blog');
+});
+Route::get('/kontak', function() {
+    return view('frontend.kontak');
+});
+
+
+Route::get('/', 'App\Http\Controllers\FrontendController@index');
+Route::get('/', 'App\Http\Controllers\homeControllers@index');
+Route::get('/galery', 'App\Http\Controllers\galleryControllers@index');
