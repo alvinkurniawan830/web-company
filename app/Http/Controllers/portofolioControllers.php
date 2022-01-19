@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class portofolioControllers extends Controller
 {
@@ -13,7 +14,8 @@ class portofolioControllers extends Controller
      */
     public function index()
     {
-        //
+         $portofolio = DB :: table('portofolios')->get();
+        return view('frontend.portofolio',['portofolio'=> $portofolio]);
     }
 
     /**

@@ -34,8 +34,16 @@ Route::get('/blog', function() {
 Route::get('/kontak', function() {
     return view('frontend.kontak');
 });
+Route::get('/content', function() {
+    return view('frontend.content');
+});
+
 
 
 Route::get('/', 'App\Http\Controllers\FrontendController@index');
 Route::get('/', 'App\Http\Controllers\homeControllers@index');
 Route::get('/galery', 'App\Http\Controllers\galleryControllers@index');
+Route::get('/profil', 'App\Http\Controllers\misiControllers@index');
+Route::get('/portofolio', 'App\Http\Controllers\portofolioControllers@index');
+Route::get('/blog', 'App\Http\Controllers\blogControllers@index');
+Route::get('/content', 'App\Http\Controllers\blogControllers@index2');

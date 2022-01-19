@@ -8,25 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"/>
     <!-- Place favicon.ico in the root directory -->
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap" rel="stylesheet">
     <!-- ========================= CSS here ========================= -->
     <link rel="stylesheet" href="css/LineIcons.2.0.css"/>
     <link rel="stylesheet" href="css/tiny-slider.css"/>
     <link rel="stylesheet" href="css/animate.css"/>
     <link rel="stylesheet" href="css/tailwindcss.css"/>
-    <script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <!--[if lte IE 9]>
-      <p class="browserupgrade">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
-        your experience and security.
-      </p>
-    <![endif]-->
+  
 		
 		<!-- ========================= header start ========================= -->
-   <header class="header">
+    <header class="header">
       <div class="navbar-area bg-blue-600">
         <div class="container relative ">
           <div class="row ">
@@ -66,40 +62,23 @@
       </div>
       <!-- navbar area -->
     </header>
-
-
-    
-
-    <section  class="about-section z-10 pt-150">
-			<div class="container">
-        <div class="text-center sm:text-left">
-        <div class="grid grid-cols-4 gap-4">
-
-          <!-- This is an example component -->
-          @foreach ($blog as $blog)
-          
-          <div class="max-w-lg mx-auto">
-            <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-                <a href="/content">
-                    <img class="rounded-t-lg" src="{{ $blog->image }}" alt="">
-                </a>
-                <div class="p-5">
-                    <a href="/content">
-                        <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2">{{ $blog->tittle }}</h5>
-                    </a>
-                    <p class="font-normal text-gray-700 mb-3">{{ $blog->author }}</p>
-                    <a class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" href="/content">
-                        Read more
-                    </a>
-                  </div>
-              </div>
-              </div>
-
-              @endforeach
-
+        <!-- ========================= header end ========================= -->
+        @foreach ($blog as $blog)
+        <section  class="hero-section relative bg-no-repeat bg-top z-10 pt-200 pb-13 lg:pb-200 2xl:pb-120">
+          <div class="section-title text-center">
+            <h3 class="mb-8 text-5xl font-bold">{{ $blog->tittle }}</h3>
           </div>
+         <div>
+           <img class="m-auto w-1/2 max-h-64 mb-12 rounded-lg "src="{{ $blog->image }}" alt="">
+        </div>
+          <div class=" m-auto w-3/4 ">
+          <div class="whitespace-normal ...">
+          <p class="indent-8 font-medium" style="font-family: 'Poppins', sans-serif;">{{ $blog->content }}</p>
+        </div>
          </div>
-        </section>  
+      </section>      
+        @endforeach
+
         <!-- ========================= footer start ========================= -->
         <footer class="bg-blue-600 text-white ">
           <div class="container flex flex-col p-4 mx-auto md:p-8 lg:flex-row divide-coolGray-400">
@@ -108,7 +87,7 @@
               <li>About</li>
               <li>Blog</li>
               <li>Pricing</li>
-              <li>Contact</li>
+              <li>Contact</li>{{  }}
             </ul>
             <div class="flex flex-col justify-center pt-6 lg:pt-0">
               <div class="flex justify-center space-x-4">
@@ -128,6 +107,5 @@
     <script src="js/tiny-slider.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
-    
   </body>
 </html>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class misiControllers extends Controller
 {
@@ -13,8 +14,9 @@ class misiControllers extends Controller
      */
     public function index()
     
-    {
+    { $misi = DB :: table('misis')->get();
         //
+      return view('frontend.profile',['misi'=> $misi]);  
     }
 
     /**

@@ -14,39 +14,22 @@
     <link rel="stylesheet" href="css/tiny-slider.css"/>
     <link rel="stylesheet" href="css/animate.css"/>
     <link rel="stylesheet" href="css/tailwindcss.css"/>
+	<script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <!--[if lte IE 9]>
-      <p class="browserupgrade">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
-        your experience and security.
-      </p>
-    <![endif]-->
-		
-		<!-- ========================= header start ========================= -->
+  <body>		<!-- ========================= header start ========================= -->
     <header class="header">
-      <div class="navbar-area">
-        <div class="container relative">
-          <div class="row items-center">
-            <div class="w-full">
+      <div class="navbar-area bg-blue-600">
+        <div class="container relative ">
+          <div class="row ">
+            <div class="w-full ">
               <nav class="flex items-center justify-between py-4 navbar navbar-expand-lg">
-                <a class="navbar-brand mr-5" href="index.html">
-                    
-                </a>
-                <button class="block navbar-toggler focus:outline-none lg:hidden" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="toggler-icon"></span>
-                  <span class="toggler-icon"></span>
-                  <span class="toggler-icon"></span>
-                </button>
-
-                <div class="absolute left-0 z-20 hidden w-full px-5 py-3 duration-300 bg-white shadow lg:w-auto collapse navbar-collapse lg:block top-full mt-full lg:static lg:bg-transparent lg:shadow-none" id="navbarOne">
+                <div class="absolute left-0 z-20 hidden w-full px-5 py-3 duration-300 bg-blue shadow lg:w-auto collapse navbar-collapse lg:block top-full mt-full lg:static lg:bg-blue lg:shadow-none" id="navbarOne">
                   <ul id="nav" class="items-center content-start mr-auto lg:justify-end navbar-nav lg:flex">
                     <li class="nav-item ml-5 lg:ml-11">
                       <a  href="/">Home</a>
                     </li>
                      <li class="nav-item ml-5 lg:ml-11">
-                      <a  href="profil">Profil</a>
+                      <a  href="/profil">Profil</a>
                     </li>
                     <li class="nav-item ml-5 lg:ml-11">
                       <a href="/portofolio">Portofolio</a>
@@ -74,63 +57,44 @@
       </div>
       <!-- navbar area -->
     </header>
-
-
+        <!-- ========================= header end ========================= -->
+<div class="h-screen flex">
+  <div class="flex w-1/2 bg-gradient-to-tr from-blue-600 to-blue-600 i justify-around items-center">
+    <div>
+      <h1 class="text-white font-bold text-4xl font-sans">Contact Me !</h1>
+      <p class="text-white mt-1">Dont Use Toxic Word Please</p>
+    </div>
+  </div>
+  <div class="flex w-1/2 justify-center items-center bg-white">
+    <form class="bg-white">
+      <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
+      
+        <input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="Email Address" />
+      </div>
+      <div class="flex items-center border-2 py-2 px-3 rounded-2xl">
+        <textarea name="" id="" cols="40" class="pl-2 outline-none border-none" rows="5"></textarea>
+      </div>
+      <button type="submit" class="block w-full bg-blue-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2">Send</button>
+    </form>
+  </div>
+</div>
         <!-- ========================= footer start ========================= -->
-		<footer class="footer bg-cover bg-no-repeat bg-right-top pt-120 mt-25 bg-theme-color md:bg-transparent md:pt-260 lg:pt-260" style="background-image: url('img/footer/footer-bg.svg');">
-			<div class="container">
-				<div class="widget-wrapper">
-					<div class="row">
-						
-						
-								<p class="mb-8 text-white sm:pr-13 md:pr-0 2xl:pr-25">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt.</p>
-								<ul class="socials flex items-center">
-									<li class="mr-5">
-										<a href="jvascript:void(0)"> <i class="lni lni-facebook-original"></i> </a>
-									</li>
-									<li class="mr-5">
-										<a href="jvascript:void(0)"> <i class="lni lni-twitter-original"></i> </a>
-									</li>
-									<li class="mr-5">
-										<a href="jvascript:void(0)"> <i class="lni lni-instagram-original"></i> </a>
-									</li>
-									<li>
-										<a href="jvascript:void(0)"> <i class="lni lni-linkedin-original"></i> </a>
-									</li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="w-full md:w-6/12 lg:w-2/12">
-							<div class="footer-widget mb-10 mx-3">
-								<h3 class="mb-6 text-white">About Us</h3>
-								<ul class="links">
-									<li> <a href="/">Home</a> </li>
-									<li> <a href="/profil">Profil</a> </li>
-									<li> <a href="/portofolio">Portofolio</a> </li>
-									<li> <a href="/blog">Blog</a> </li>
-									<li> <a href="/kontak">Kontak</a> </li>
-									<li> <a href="/galery">Gallery</a> </li>
-								</ul>
-							</div>
-						</div>
-						<div class="w-full md:w-6/12 lg:w-3/12">
-							<div class="footer-widget mb-10 mx-3">
-								<h3 class="mb-6 text-white">Other Products</h3>
-								<ul class="links">
-									<li> <a href="jvascript:void(0)">Accounting Software</a> </li>
-									<li> <a href="jvascript:void(0)">Billing Software</a> </li>
-									<li> <a href="jvascript:void(0)">Booking System</a> </li>
-									<li> <a href="jvascript:void(0)">Tracking System</a> </li>
-								</ul>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-		</footer>
+        <footer class="bg-blue-600 text-white ">
+          <div class="container flex flex-col p-4 mx-auto md:p-8 lg:flex-row divide-coolGray-400">
+            <ul class="self-center py-6 space-y-4 text-center sm:flex sm:space-y-0 sm:justify-around sm:space-x-4 lg:flex-1 lg:justify-start">
+              <li>Shop</li>
+              <li>About</li>
+              <li>Blog</li>
+              <li>Pricing</li>
+              <li>Contact</li>
+            </ul>
+            <div class="flex flex-col justify-center pt-6 lg:pt-0">
+              <div class="flex justify-center space-x-4">
+                ©️Copyright Alvin
+              </div>
+            </div>
+          </div>
+        </footer>
     <!-- ========================= footer end ========================= -->
 
     <!-- ========================= scroll-top ========================= -->

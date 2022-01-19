@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class blogControllers extends Controller
 {
@@ -13,7 +14,15 @@ class blogControllers extends Controller
      */
     public function index()
     {
+        $blog = DB :: table('blogs')->get();
         //
+        return view('frontend.blog',['blog'=> $blog]);
+    }
+    public function index2()
+    {
+        $blog = DB :: table('blogs')->get();
+        //
+        return view('frontend.content',['blog'=> $blog]);
     }
 
     /**
