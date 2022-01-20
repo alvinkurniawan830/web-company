@@ -87,7 +87,7 @@
               <li>About</li>
               <li>Blog</li>
               <li>Pricing</li>
-              <li>Contact</li>{{  }}
+              <li>Contact</li>
             </ul>
             <div class="flex flex-col justify-center pt-6 lg:pt-0">
               <div class="flex justify-center space-x-4">

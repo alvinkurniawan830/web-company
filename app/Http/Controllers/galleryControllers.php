@@ -13,8 +13,8 @@ class galleryControllers extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {    
-        $gallery = DB :: table('galleries')->get();
+    {  $gallery  
+         = DB :: table('galleries')->get();
         //
         return view('frontend.galery',['gallery'=> $gallery]);
     }

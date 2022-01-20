@@ -98,8 +98,7 @@
                      </a>
                   </h3>
                   <p class="text-base text-body-color leading-relaxed mb-7">
-                     Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                     elit. Lorem consectetur adipiscing elit.
+                     Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit.
                   </p>
                   <a
                      href="javascript:void(0)"

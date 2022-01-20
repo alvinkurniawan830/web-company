@@ -58,26 +58,26 @@
       <!-- navbar area -->
     </header>
         <!-- ========================= header end ========================= -->
-<div class="h-screen flex">
-  <div class="flex w-1/2 bg-gradient-to-tr from-blue-600 to-blue-600 i justify-around items-center">
-    <div>
-      <h1 class="text-white font-bold text-4xl font-sans">Contact Me !</h1>
-      <p class="text-white mt-1">Dont Use Toxic Word Please</p>
-    </div>
-  </div>
-  <div class="flex w-1/2 justify-center items-center bg-white">
-    <form class="bg-white">
-      <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
-      
-        <input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="Email Address" />
-      </div>
-      <div class="flex items-center border-2 py-2 px-3 rounded-2xl">
-        <textarea name="" id="" cols="40" class="pl-2 outline-none border-none" rows="5"></textarea>
-      </div>
-      <button type="submit" class="block w-full bg-blue-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2">Send</button>
-    </form>
-  </div>
-</div>
+        <div class="h-screen flex">
+          <div class="flex w-1/2 bg-gradient-to-tr from-blue-600 to-blue-600 i justify-around items-center">
+            <div>
+              <h1 class="text-white font-bold text-4xl font-sans">Contact Me !</h1>
+              <p class="text-white mt-1">Dont Use Toxic Word Please</p>
+            </div>
+          </div>
+          <div class="flex w-1/2 justify-center items-center bg-white">
+            <form class="bg-white">
+              <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
+              
+                <input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="Email Address" />
+              </div>
+              <div class="flex items-center border-2 py-2 px-3 rounded-2xl">
+                <textarea name="" id="" cols="40" class="pl-2 outline-none border-none" rows="5"></textarea>
+              </div>
+              <button type="submit" class="block w-full bg-blue-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2">Send</button>
+            </form>
+          </div>
+        </div>
         <!-- ========================= footer start ========================= -->
         <footer class="bg-blue-600 text-white ">
           <div class="container flex flex-col p-4 mx-auto md:p-8 lg:flex-row divide-coolGray-400">
