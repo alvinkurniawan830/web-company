@@ -70,37 +70,66 @@
 
     
 
-    <section  class="about-section z-10 pt-150">
-			<div class="container">
-        <div class="text-center sm:text-left">
-        <div class="grid grid-cols-4 gap-4">
-
-          <!-- This is an example component -->
-          @foreach ($blog as $blog)
-          
-          <div class="max-w-lg mx-auto">
-            <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-                <a href="/content">
-                    <img class="rounded-t-lg" src="{{ $blog->image }}" alt="">
-                </a>
-                <div class="p-5">
-                    <a href="/content">
-                        <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2">{{ $blog->tittle }}</h5>
-                    </a>
-                    <p class="font-normal text-gray-700 mb-3">{{ $blog->author }}</p>
-                    
-                    <a class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" href="/content">
-                        Read more
-                    </a>
+    @foreach ($blog as $blog) 
+    <section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6]">
+      <div class="container">
+         <div class="flex flex-wrap -mx-4">
+            <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+               <div class="bg-white rounded-lg overflow-hidden mb-10">
+                  <img
+                     src="{{ $blog->image }}"
+                     alt="image"
+                     class="w-full"
+                     />
+                  <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                     <h3>
+                        <a
+                           href="javascript:void(0)"
+                           class="
+                           font-semibold
+                           text-dark text-xl
+                           sm:text-[22px]
+                           md:text-xl
+                           lg:text-[22px]
+                           xl:text-xl
+                           2xl:text-[22px]
+                           mb-4
+                           block
+                           hover:text-primary
+                           "
+                           >
+                        {{ $blog->tittle }}
+                        </a>
+                     </h3>
+                     <p class="text-base text-body-color leading-relaxed mb-7">
+                       {{ $blog->author }}
+                     </p>
+                     <a
+                        href="/content"
+                        class="
+                        inline-block
+                        py-2
+                        px-7
+                        border border-[#E5E7EB]
+                        rounded-full
+                        text-base text-body-color
+                        font-medium
+                        hover:border-primary hover:bg-primary hover:text-black
+                        transition
+                        "
+                        >
+                     Read More
+                     </a>
                   </div>
-              </div>
-              </div>
+               </div>
+            </div>
 
-              @endforeach
-
-          </div>
+           
          </div>
-        </section>  
+      </div>
+   </section>
+   @endforeach
+   
         <!-- ========================= footer start ========================= -->
         <footer class="bg-blue-600 text-white ">
           <div class="container flex flex-col p-4 mx-auto md:p-8 lg:flex-row divide-coolGray-400">

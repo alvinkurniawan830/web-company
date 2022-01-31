@@ -72,10 +72,13 @@
            <img class="m-auto w-1/2 max-h-64 mb-12 rounded-lg "src="{{ $blog->image }}" alt="">
         </div>
           <div class=" m-auto w-3/4 ">
-          <div class="whitespace-normal ...">
+            <div class="whitespace-normal ...">
           <p class="indent-8 font-medium" style="font-family: 'Poppins', sans-serif;">{{ $blog->content }}</p>
-        </div>
+            </div>
          </div>
+         <div class="section-title text-center">
+          <h6 class="mb-8 text-1xl font-bold">{{ $blog->author }}</h6>
+        </div>
       </section>      
         @endforeach
 
