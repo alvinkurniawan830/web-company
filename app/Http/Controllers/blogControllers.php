@@ -18,7 +18,7 @@ class blogControllers extends Controller
         //
         return view('frontend.blog',['blog'=> $blog]);
     }
-    public function index2()
+    public function index2($id)
     {
         $blog = DB :: table('blogs')->get();
         //
@@ -91,3 +91,4 @@ class blogControllers extends Controller
         //
     }
 }
+{{  }}

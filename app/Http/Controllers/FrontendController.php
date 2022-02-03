@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\hero;
+use App\Models\home;
+use App\Models\about;
 
 class FrontendController extends Controller
 {
@@ -13,7 +16,12 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        return view ('frontend.index');
+        $hero = Hero::all();
+        $home = Home::all();
+        $about = About::all();
+       
+        return view('frontend.index',compact('hero','home','about',) 
+    );
     }
 
     /**

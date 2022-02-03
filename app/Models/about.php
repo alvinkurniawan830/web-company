@@ -8,5 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class about extends Model
 {
     use HasFactory;
-    protected $filable = ['text','tittle','image'];
 }

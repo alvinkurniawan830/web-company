@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMisisTable extends Migration
+class CreateBlogsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateMisisTable extends Migration
      */
     public function up()
     {
-        Schema::create('misis', function (Blueprint $table) {
+        Schema::create('blogs', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
-            $table->string('text');
-            $table->string('visi');
-            $table->string('misi');
             $table->timestamps();
+            $table->string('image')->nullable();
+            $table->string('author');
+            $table->string('tittle');
+            $table->text  ('content');
         });
     }
 
@@ -30,6 +30,6 @@ class CreateMisisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('misis');
+        Schema::dropIfExists('blogs');
     }
 }

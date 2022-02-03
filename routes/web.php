@@ -41,9 +41,10 @@ Route::get('/content', function() {
 
 
 Route::get('/', 'App\Http\Controllers\FrontendController@index');
-Route::get('/', 'App\Http\Controllers\homeControllers@index');
+
 Route::get('/galery', 'App\Http\Controllers\galleryControllers@index');
-Route::get('/profil', 'App\Http\Controllers\misiControllers@index');
+Route::get('/profil', 'App\Http\Controllers\ProfileController@index');
 Route::get('/portofolio', 'App\Http\Controllers\portofolioControllers@index');
 Route::get('/blog', 'App\Http\Controllers\blogControllers@index');
-Route::get('/content', 'App\Http\Controllers\blogControllers@index2');
+Route::get('/content/{blog.id}', 'App\Http\Controllers\blogControllers@index2');
+Route::get('/vidio', 'App\Http\Controllers\vidioControler@index');

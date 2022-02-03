@@ -17,13 +17,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <!--[if lte IE 9]>
-      <p class="browserupgrade">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
-        your experience and security.
-      </p>
-    <![endif]-->
+  
 		
 		<!-- ========================= header start ========================= -->
    <header class="header">
@@ -70,10 +64,11 @@
 
     
 
-    @foreach ($blog as $blog) 
+    
     <section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6]">
       <div class="container">
-         <div class="flex flex-wrap -mx-4">
+         <div class="flex flex-wrap -mx-4"> 
+            @foreach ($blog as $blog) 
             <div class="w-full md:w-1/2 xl:w-1/3 px-4">
                <div class="bg-white rounded-lg overflow-hidden mb-10">
                   <img
@@ -84,7 +79,7 @@
                   <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
                      <h3>
                         <a
-                           href="javascript:void(0)"
+                           href="/content"
                            class="
                            font-semibold
                            text-dark text-xl
@@ -105,7 +100,7 @@
                        {{ $blog->author }}
                      </p>
                      <a
-                        href="/content"
+                        href="/content/{{ $blog->id }}"
                         class="
                         inline-block
                         py-2
@@ -122,13 +117,15 @@
                      </a>
                   </div>
                </div>
+               
             </div>
+            @endforeach
 
            
          </div>
       </div>
    </section>
-   @endforeach
+   
    
         <!-- ========================= footer start ========================= -->
         <footer class="bg-blue-600 text-white ">

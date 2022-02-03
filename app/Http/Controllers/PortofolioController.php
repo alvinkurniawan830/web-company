@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\portofolio;
+use App\Http\Requests\StoreportofolioRequest;
+use App\Http\Requests\UpdateportofolioRequest;
 
-class aboutControllers extends Controller
+class PortofolioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,8 @@ class aboutControllers extends Controller
      */
     public function index()
     {
-        //
+        $portofolio = DB :: table('portofolios')->get();
+        return view('frontend.portofolio',['portofolio'=> $portofolio]);
     }
 
     /**
@@ -29,10 +32,10 @@ class aboutControllers extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\StoreportofolioRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreportofolioRequest $request)
     {
         //
     }
@@ -40,10 +43,10 @@ class aboutControllers extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\portofolio  $portofolio
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(portofolio $portofolio)
     {
         //
     }
@@ -51,10 +54,10 @@ class aboutControllers extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\portofolio  $portofolio
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(portofolio $portofolio)
     {
         //
     }
@@ -62,11 +65,11 @@ class aboutControllers extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Http\Requests\UpdateportofolioRequest  $request
+     * @param  \App\Models\portofolio  $portofolio
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateportofolioRequest $request, portofolio $portofolio)
     {
         //
     }
@@ -74,10 +77,10 @@ class aboutControllers extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\portofolio  $portofolio
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(portofolio $portofolio)
     {
         //
     }
