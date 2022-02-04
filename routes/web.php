@@ -34,17 +34,23 @@ Route::get('/blog', function() {
 Route::get('/kontak', function() {
     return view('frontend.kontak');
 });
-Route::get('/content', function() {
+Route::get('/content/{blog:id}', function() {
     return view('frontend.content');
+});
+Route::get('/vidio', function() {
+    return view('frontend.vidio');
 });
 
 
 
-Route::get('/', 'App\Http\Controllers\FrontendController@index');
 
+Route::get('/', 'App\Http\Controllers\FrontendController@index');
 Route::get('/galery', 'App\Http\Controllers\galleryControllers@index');
 Route::get('/profil', 'App\Http\Controllers\ProfileController@index');
 Route::get('/portofolio', 'App\Http\Controllers\portofolioControllers@index');
-Route::get('/blog', 'App\Http\Controllers\blogControllers@index');
-Route::get('/content/{blog.id}', 'App\Http\Controllers\blogControllers@index2');
-Route::get('/vidio', 'App\Http\Controllers\vidioControler@index');
+Route::get('/blog', 'App\Http\Controllers\BlogController@index');
+Route::get('/content/{blog:id}','App\Http\Controllers\BlogController@show');
+Route::get('/vidio', 'App\Http\Controllers\VidioController@index');
+
+Route::get('/mailform','App\Http\Controllers\SendMailController@loadForm')->name('mail.form');
+Route::post('/mailsend','App\Http\Controllers\SendMailController@sendMail')->name('mail.send');

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\gallery;
 use App\Http\Requests\StoregalleryRequest;
 use App\Http\Requests\UpdategalleryRequest;
-
+use Illuminate\Support\Facades\DB;
 class GalleryController extends Controller
 {
     /**

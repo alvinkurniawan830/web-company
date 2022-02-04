@@ -5,12 +5,27 @@
   <body>
     
     <!-- component -->
-    <div class="w-full bg-white">
-        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12 mt-24">
+    
+    <div class="w-full bg-white" >
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12 mt-24 ">
             <div class="text-center pb-12">
                 <h2 class="text-base text-4xl font-bold text-indigo-600">
                   Gallery
                 </h2>
+                <div>
+                  <div class="flex justify-center items-center">
+                      <div class="bg-gray-200 rounded-sm">
+                    <div class="inline-flex rounded-sm">
+                      <input type="radio" name="room_type" id="roomPrivate"  hidden/>
+                      <label for="roomPrivate" class="radio text-center self-center py-2 px-4 rounded-lg cursor-pointer hover:opacity-75"><a href="/galery">Gallery</a></label>
+                    </div>
+                    <div class="inline-flex rounded-sm">
+                      <input type="radio" name="room_type" id="roomPublic" checked hidden/>
+                      <label for="roomPublic" class="radio text-center self-center py-2 px-4 rounded-lg cursor-pointer hover:opacity-75"><a href="/vidio">vidio</a></label>
+                    </div>
+                    </div>
+                    </div>
+                </div>
             </div>
             <div class="flex flex-wrap -mx-4">
               @foreach ($gallery as $item)
@@ -20,7 +35,7 @@
                        src="{{$item->image}}"
                        alt="image"
                        class="h-64 bg-cover lg:rounded-lg lg:h-full"
-     
+
                        />
                     <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
                        <h3 class="
@@ -73,5 +88,5 @@
 
    
   </body>
-</html>
+
 @endsection

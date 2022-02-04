@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\blog;
 use App\Http\Requests\StoreblogRequest;
 use App\Http\Requests\UpdateblogRequest;
-
+use Illuminate\Support\Facades\DB;
 class BlogController extends Controller
 {
     /**
@@ -15,7 +15,13 @@ class BlogController extends Controller
      */
     public function index()
     {
+        $blog = DB :: table('blogs')->get();
         //
+        return view('frontend.blog',['blog'=> $blog]);
+    }
+    public function index2($id)
+    {
+      
     }
 
     /**
@@ -47,7 +53,11 @@ class BlogController extends Controller
      */
     public function show(blog $blog)
     {
-        //
+        $blogs = DB::table('blogs')->get();
+        return view('frontend.content', [
+            'blog' => $blog,
+            'blogs' => $blogs
+        ]);
     }
 
     /**

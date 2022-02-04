@@ -37,22 +37,7 @@
                   <p class="text-base text-body-color leading-relaxed mb-7">
                      Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit.
                   </p>
-                  <a
-                     href="javascript:void(0)"
-                     class="
-                     inline-block
-                     py-2
-                     px-7
-                     border border-[#E5E7EB]
-                     rounded-full
-                     text-base text-body-color
-                     font-medium
-                     hover:border-primary hover:bg-primary hover:text-white
-                     transition
-                     "
-                     >
-                  View Details
-                  </a>
+                  
                </div>
             </div>
          </div>

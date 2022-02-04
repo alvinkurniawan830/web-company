@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\vidio;
 use App\Http\Requests\StorevidioRequest;
 use App\Http\Requests\UpdatevidioRequest;
-
+use Illuminate\Support\Facades\DB;
 class VidioController extends Controller
 {
     /**
@@ -15,7 +15,11 @@ class VidioController extends Controller
      */
     public function index()
     {
-        //
+        $vidio = DB::table('vidios')->get();
+       
+      return view('frontend.vidio',['vidio'=> $vidio]);
+        
+        
     }
 
     /**

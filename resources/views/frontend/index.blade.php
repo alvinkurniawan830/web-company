@@ -33,10 +33,6 @@
 		
 		<!-- ========================= about2-section start ========================= -->
 	@foreach ($about as $item)
-		
-	
-			
-		
 		<section id="about" class="about-section pt-150">
 			<div class="container">
 				<div class="row flex items-center">

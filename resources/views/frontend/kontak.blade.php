@@ -45,7 +45,7 @@
                       <a  href="/galery">Gallery</a>
                     </li>
                   </ul>
-                </div>c
+                </div>
                 <!-- navbar collapse -->
               </nav>
               <!-- navbar -->
